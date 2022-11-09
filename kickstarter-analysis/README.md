@@ -11,13 +11,19 @@ The purpose of this analysis is to obtain insights from crowdfuding data to info
 The [dataset](Kickstarter_Challenge.xlsx) analyzed consisted of 4113 fundraising campaigns (raw data is included in the "Kickstarter" sheet). Data about each campaign included the goal, amount pledged, launch date, end date, number of contributors country, category & subcategory, and campaign outcome, among other variables. 
 
 The first objective was to determine if the month of the launch date for a campaign had an effect on the outcome (i.e. whether or not the goal was reached). To do this, I created a table for campaigns in the "theater" category summarizing the number of successful, failed, and canceled campaigns for each launch month (fig. 1).
+
 ![Fig. 1](/resources/launch_date_pivot.png)
+
 I then visualized the relationship between campaign outcome and launch month with a line chart (fig. 2).
+
 ![Fig. 2](/resources/theater_outcomes_vs_launch.png)
 
 The second objetive was to determine if there is an effect of the campaign goal on the outcome. I first group campaigns belonging to the "plays" subcategory into twelve different dollar-amount ranges for their goal (see fig. 3). I then calculated the number and percentage of successful, failed, and canceled campaigns in each range.
+
 ![Fig. 3](/resources/goal_table.png)
+
 I then created a line chart to visualize the relationsip between campaign outcomes and campaign goal.
+
 ![Fig. 4](/resources/Outcomes_vs_Goals.png)
 
 ### Challenges
