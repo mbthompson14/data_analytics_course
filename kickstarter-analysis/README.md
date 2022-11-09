@@ -10,15 +10,15 @@ The purpose of this analysis is to obtain insights from crowdfuding data to info
 
 The [dataset](Kickstarter_Challenge.xlsx) analyzed consisted of 4113 fundraising campaigns (raw data is included in the "Kickstarter" sheet). Data about each campaign included the goal, amount pledged, launch date, end date, number of contributors country, category & subcategory, and campaign outcome, among other variables. 
 
-The first objective was to determine if the month of the launch date for a campaign had an effect on the outcome (i.e. whether or not the goal was reached). To do this, I created a table for campaigns in the "theater" category summarizing the number of successful, failed, and canceled campaigns for each launch month (fig. 1).
+The first objective was to determine if the month of the launch date for a campaign had an effect on the outcome (i.e. whether or not the goal was reached). To do this, I created a table for campaigns in the "theater" category summarizing the number of successful, failed, and canceled campaigns for each launch month.
 
 ![Fig. 1](/resources/launch_date_pivot.png)
 
-I then visualized the relationship between campaign outcome and launch month with a line chart (fig. 2).
+I then visualized the relationship between campaign outcome and launch month with a line chart.
 
 ![Fig. 2](/resources/theater_outcomes_vs_launch.png)
 
-The second objetive was to determine if there is an effect of the campaign goal on the outcome. I first group campaigns belonging to the "plays" subcategory into twelve different dollar-amount ranges for their goal (see fig. 3). I then calculated the number and percentage of successful, failed, and canceled campaigns in each range.
+The second objetive was to determine if there is an effect of the campaign goal on the outcome. I first group campaigns belonging to the "plays" subcategory into twelve different dollar-amount ranges for their goal. I then calculated the number and percentage of successful, failed, and canceled campaigns in each range.
 
 ![Fig. 3](/resources/goal_table.png)
 
@@ -37,7 +37,7 @@ Based on this limited, descriptive analysis, I can conclude that the launch mont
 
 ### What can you conclude about the Outcomes based on Goals?
 
-From this descriptive analysis, I can conclude that the dollar-amount ranges for which the percent of successful campaigns was higher than failed campaigns were less than $15,000 and $35,000 to $44,999. Again, no relationships between these variables can be confirmed without inferential tests or considering confoudning variables.
+From this descriptive analysis, I can conclude that the dollar-amount ranges for which the percent of successful campaigns was higher than failed campaigns were less than $15,000 and $35,000 to $44,999. *Fever's* predicted production cost of >$10,000 falls within the range in which more campaigns were successful than unsuccessful (in this sample), assuming the cost does not exceed $15,000. Again, no relationships between these variables can be confirmed without inferential tests or considering confoudning variables.
 
 ### What are some limitations of this dataset?
 
