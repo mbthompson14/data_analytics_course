@@ -45,8 +45,8 @@ CREATE TABLE titles (
 );
 
 CREATE TABLE dept_emp(
-	dept_no VARCHAR NOT NULL,
 	emp_no INT NOT NULL,
+	dept_no VARCHAR NOT NULL,
 	from_date DATE NOT NULL,
 	to_date DATE NOT NULL,
 	FOREIGN KEY (dept_no) REFERENCES departments (dept_no),
