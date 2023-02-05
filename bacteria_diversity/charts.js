@@ -58,19 +58,40 @@ function buildMetadata(sample) {
 function buildCharts(sample) {
   // Deliverable 1: 2. Use d3.json to load the samples.json file 
   d3.json("samples.json").then((data) => {
-    console.log(data);
+    //console.log(data);
 
     // Deliverable 1: 3. Create a variable that holds the samples array. 
+    let samples = data.samples
+    //console.log(samples)
 
     // Deliverable 1: 4. Create a variable that filters the samples for the object with the desired sample number.
+    console.log(sample)
+    let selected_array = samples.filter(entry => entry.id == sample)
+    //console.log(selected_array)
 
     // Deliverable 3: 1. Create a variable that filters the metadata array for the object with the desired sample number.
 
     // Deliverable 1: 5. Create a variable that holds the first sample in the array.
+    let selected = selected_array[0]
+    console.log(selected)
 
     // Deliverable 3: 2. Create a variable that holds the first sample in the metadata array.
 
     // Deliverable 1: 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
+    otu_ids = selected.otu_ids
+    otu_labels = selected.otu_labels
+    sample_values = selected.sample_values
+    array_of_objects = []
+
+    for (let i=0; i<otu_ids.length; i++) {
+      array_of_objects.push({
+        id: otu_ids[i],
+        label: otu_labels[i],
+        value: sample_values[i]
+      })
+    }
+
+    console.log(array_of_objects)
 
     // Deliverable 3: 3. Create a variable that holds the washing frequency.
 
@@ -78,19 +99,28 @@ function buildCharts(sample) {
     // Deliverable 1: 7. Create the yticks for the bar chart.
     // Hint: Get the the top 10 otu_ids and map them in descending order 
     // so the otu_ids with the most bacteria are last. 
-    var yticks = 
+    var top10 = array_of_objects.sort((a,b) => b.value - a.value).slice(0,10).reverse()
+    console.log(top10)
+    var topIDs = top10.map(entry => `OTU_${String(entry.id)}`)
+    var topLabels = top10.map(entry => entry.label)
+    var topValues = top10.map(entry => entry.value)
 
     // Deliverable 1: 8. Create the trace for the bar chart. 
-    var barData = [
-
-    ];
+    var barData = [{
+      x: topValues,
+      y: topIDs,
+      type: "bar",
+      orientation: "h",
+      text: topLabels
+    }];
 
     // Deliverable 1: 9. Create the layout for the bar chart. 
-    var barLayout = {
+    //var barLayout = {
 
-    };
+    //};
 
     // Deliverable 1: 10. Use Plotly to plot the data with the layout. 
+    Plotly.newPlot("bar", barData)
 
     // Deliverable 2: 1. Create the trace for the bubble chart.
 
