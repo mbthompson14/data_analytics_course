@@ -1,0 +1,10 @@
+.randomtext {
+    color:indigo;
+    font:caption
+  }
+
+.jumbotron {
+    background-image: url("img.jpg");
+    background-size: 100% 100%;
+    text-align: center;
+}
