@@ -1,3 +1,3 @@
-# uofu_data_analytics
+# data_analytics_course
 
 collection of repos for data analytics course
